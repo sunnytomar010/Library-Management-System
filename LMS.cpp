@@ -136,41 +136,7 @@ void bookdeposit();
 void adminmenu();
 void intro();
 
-// ==================== MAIN FUNCTION ====================
-int main() {
-    char ch;
-    intro();
-    
-    do {
-        system("clear || cls");
-        cout << "\n\n\n\tMAIN MENU";
-        cout << "\n\n\n\t1 BOOK ISSUE";
-        cout << "\n\n\n\t2 BOOK DEPOSIT";
-        cout << "\n\n\n\t3 ADMINISTRATOR MENU";
-        cout << "\n\n\n\t4 EXIT";
-        cout << "\n\n\n\tPLEASE SELECT YOUR OPTION(1-4) ";
-        cin >> ch;
 
-        switch(ch) {
-            case '1':
-                bookissue();
-                break;
-            case '2':
-                bookdeposit();
-                break;
-            case '3':
-                adminmenu();
-                break;
-            case '4':
-                exit(0);
-                break;
-            default:
-                cout << "INVALID CHOICE";
-        }
-    } while(ch != '4');
-
-    return 0;
-}
 
 // ==================== INTRODUCTION SCREEN ====================
 void intro() {
@@ -568,4 +534,39 @@ void bookdeposit() {
     cin.get();
     fp.close();
     fp1.close();
+}
+// ==================== MAIN FUNCTION ====================
+int main() {
+    char ch;
+    intro();
+    
+    do {
+        system("clear || cls");
+        cout << "\n\n\n\tMAIN MENU";
+        cout << "\n\n\n\t1 BOOK ISSUE";
+        cout << "\n\n\n\t2 BOOK DEPOSIT";
+        cout << "\n\n\n\t3 ADMINISTRATOR MENU";
+        cout << "\n\n\n\t4 EXIT";
+        cout << "\n\n\n\tPLEASE SELECT YOUR OPTION(1-4) ";
+        cin >> ch;
+
+        switch(ch) {
+            case '1':
+                bookissue();
+                break;
+            case '2':
+                bookdeposit();
+                break;
+            case '3':
+                adminmenu();
+                break;
+            case '4':
+                exit(0);
+                break;
+            default:
+                cout << "INVALID CHOICE";
+        }
+    } while(ch != '4');
+
+    return 0;
 }
